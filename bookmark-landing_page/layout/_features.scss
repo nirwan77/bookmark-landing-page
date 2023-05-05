@@ -1,0 +1,162 @@
+.hidden{
+    opacity: 0;
+    position: absolute;
+}
+
+.features__nav{
+    display: flex;
+
+    .active{
+        border-bottom: 5px solid $secondary-color;
+        color: $secondary-color;
+    }
+}
+
+
+
+.features{
+    text-align: center;
+
+    &__heading{
+        margin: 0 auto;
+        max-width: 50%;
+        margin-bottom: 2em;
+    }
+
+    &__tab{
+        @include flex-row;
+        justify-content: space-around;
+        gap: 4em;
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: 2em;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .active{
+        display: flex;
+        position: relative;
+        gap: 2em;
+        justify-content: space-between;
+    }
+
+    .features__label--button:hover{
+        color: $secondary-color;
+    }
+
+    .features__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+
+.tab__content{
+    display: none;
+    margin-bottom: 13em;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .features__label{
+        @include flex-column;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    .features__nav{
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .features .active{
+        @include flex-column;
+        gap: 5em;
+
+        h3{
+            margin: 0;
+        }
+    }
+
+    .features__heading{
+        all: unset;
+    }
+
+    .features__label--button{
+        padding: 1em 0;
+        &:first-child{
+            border-top: 1px solid $third-color;
+        }
+    }
+
+    .features__label{
+        gap: 0;
+        margin-bottom: 2em;
+
+    }
+
+    .features{
+        .features__para{
+        text-align: center;
+    }
+    }
+
+    .features__background--1 {
+        position: absolute;
+        z-index: -1;
+        top: 16%;
+        background: hsl(231, 69%, 60%);
+        border-radius: 80px;
+        overflow: hidden;
+    }
+
+    .tab__content{
+        display: none;
+    }
+
+    .features .features__description{
+        text-align: center;
+    }
+
+    .features__tab{
+        display: block;
+    }
+
+    .section__title{
+        font-size: 24px;
+    }
+
+    .features__nav{
+        display: flex;
+    
+        .active{
+            color: $fourth-color;
+            border-bottom: 1px solid $third-color;
+
+            &::after{
+                content: "";
+                background-color: $secondary-color;
+                position: absolute;
+                width: 50%;
+                height: 10%;
+                top: 90%;
+                left: 25%;
+
+            }
+        }
+
+        
+    }
+
+    .features .features__label--button:hover {
+        color: $fourth-color;
+    }
+}
+

@@ -1,0 +1,25 @@
+@import 
+ "../bookmark-landing_page/abstract/variables",
+ "../bookmark-landing_page/abstract/mixin"
+ ;
+
+@import "../bookmark-landing_page/base/reset";
+
+@import 
+ "../bookmark-landing_page/component/buttons",
+ "../bookmark-landing_page/component/image"
+ ; 
+
+@import 
+    "../bookmark-landing_page/layout/navigations",
+    "../bookmark-landing_page/layout/header",
+    "../bookmark-landing_page/layout/features",
+    "../bookmark-landing_page/layout/extension",
+    "../bookmark-landing_page/layout/faq",
+    "../bookmark-landing_page/layout/contact-us",
+    "../bookmark-landing_page/layout/footer"
+;
+
+@import
+ "../bookmark-landing_page/pages/home"
+;

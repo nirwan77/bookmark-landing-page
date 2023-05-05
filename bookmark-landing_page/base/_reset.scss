@@ -1,0 +1,42 @@
+@import url("https://fonts.google.com/specimen/Rubik");
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+ font-size: 18px;
+ font-family: "Rubik", sans-serif;
+ padding: 0;
+ margin: -4px;
+ box-sizing: border-box;
+ overflow-x: hidden;
+ overflow-y: scroll;
+}
+
+p{
+    color: $third-color;
+}
+
+a{
+    border: none;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+@media only screen and (max-width: 600px) { 
+    body{
+        text-align: center;
+    }
+
+    body, html {
+        overflow-x: hidden;
+        }
+        
+}

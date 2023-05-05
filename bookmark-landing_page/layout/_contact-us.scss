@@ -1,0 +1,149 @@
+.contact-us{
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: $primary-color;
+    height: 40vh;
+
+    h5{
+        margin: 0;
+    }
+
+    .bm-heading-2{
+        text-align: center;
+        font-size: 33px;
+        max-width: 400px;
+    }
+    
+    &__form{
+        @include flex-row;
+        justify-content: space-between;
+        gap: 1em;
+    }
+
+    .contact-us__box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }   
+
+    .email{
+        outline: none;
+        position: relative;
+        z-index: 2;
+        padding: 1.5em 9em 1.5em 2em;
+        border-radius: 5px;
+
+        &::placeholder{
+            color: gray;
+        }
+        
+    }
+
+    .email__error{
+        background: hsl(0, 94%, 66%);
+        position: absolute;
+        left: 0%;
+        top: 95%;
+        padding: 6px 0px 9px 1em;
+        width: 63.3%;
+        display: none;
+    }
+}
+
+.email__container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.fa-circle-exclamation {
+    opacity: 0;
+    z-index: 3;
+    color: hsl(0, 94%, 66%);
+    position: absolute;
+    top: 28%;
+    right: 40%;
+}
+
+.fa-circle-exclamation--active{
+    opacity: 1;
+    z-index: 12;
+}
+
+.contact-us--header{
+    letter-spacing: 6px;
+}
+
+.contact-us__error{
+    display: none;
+    background: $secondary-color;
+    width: 100%;
+    position: absolute;
+    top: 97%;
+    text-align: center;
+}
+
+.contact-us .email__error--active{
+    border: 5px solid $secondary-color;
+    z-index: 123;
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-us{
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: $primary-color;
+        height: 444px;
+        padding: 0 10px;
+        
+
+        .bm-heading-2{
+            font-size: 26px;
+            text-align: center;
+            font-size: 27px;
+            
+        }
+        
+        &__form{
+            @include flex-column;
+            gap: 3em;
+        }
+    
+        .email{
+            padding: 1.5em 11em 1.5em 2em;
+            border-radius: 5px;
+        }
+
+        .email__error {
+            background: hsl(0, 94%, 66%);
+            position: absolute;
+            left: 0%;
+            z-index: 1;
+            top: 44%;
+            width: 100%;
+            padding: 3px 56px 1px 0px;
+        }}
+
+    .email__container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .fa-circle-exclamation{
+        top: 16%;
+        right: 19px;
+    }
+
+    .contact-us--header{
+        font-size: 14px;
+        max-width: 90%;
+    }
+}

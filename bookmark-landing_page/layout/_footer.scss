@@ -1,0 +1,61 @@
+footer{
+    padding: 16px 0;
+    background-color: $fourth-color;
+    @include flex-row;
+    align-items: center;
+    justify-content: space-around;
+
+    ol{
+        @include flex-row;
+        gap: 3em;
+        align-items: center;
+        justify-content: center;
+        
+        li,a{
+
+            color: white;
+            font-size: 16px;
+        }
+
+        svg path {
+            fill: #fff;
+          }
+    }
+
+    picture{
+        cursor: pointer;
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        svg path{
+            fill: #fff;
+        }
+    }
+
+    a:hover{
+        color: $secondary-color;
+    }
+
+    svg:hover path{
+        fill:$secondary-color;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    footer{
+        @include flex-column;
+        gap: 2em;
+
+        ol{
+            @include flex-column;
+            padding: 0;
+        }
+
+        picture{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
